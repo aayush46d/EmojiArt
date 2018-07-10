@@ -51,6 +51,7 @@ class EmojiView: UIView, UIDropInteractionDelegate {
         label.attributedText = attributedString
         label.sizeToFit()
         label.center = point
+        addEmojiArtGestureRecognizers(to: label)
         addSubview(label)
     }
     // Only override draw() if you perform custom drawing.

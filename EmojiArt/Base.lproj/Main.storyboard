@@ -146,14 +146,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-mV-4ky">
-                                                    <rect key="frame" x="30" y="10" width="20" height="40"/>
+                                                    <rect key="frame" x="30" y="-2" width="20" height="52"/>
                                                     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="ebQ-mV-4ky" secondAttribute="trailing" constant="22" id="3ax-au-79B"/>
-                                            <constraint firstItem="ebQ-mV-4ky" firstAttribute="top" secondItem="RvD-5S-h51" secondAttribute="topMargin" constant="2" id="Ffp-70-Bh4"/>
+                                            <constraint firstItem="ebQ-mV-4ky" firstAttribute="top" secondItem="RvD-5S-h51" secondAttribute="topMargin" constant="-10" id="Ffp-70-Bh4"/>
                                             <constraint firstItem="ebQ-mV-4ky" firstAttribute="leading" secondItem="RvD-5S-h51" secondAttribute="leadingMargin" constant="22" id="YUV-hS-tfD"/>
                                             <constraint firstItem="gE0-rW-CtK" firstAttribute="centerX" secondItem="RvD-5S-h51" secondAttribute="centerX" id="f6A-Va-tFp"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="ebQ-mV-4ky" secondAttribute="bottom" constant="22" id="kru-Aq-e8J"/>
@@ -161,6 +161,56 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="label" destination="gE0-rW-CtK" id="f1q-r7-MjS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddEmojiButtonCell" id="OCR-kr-EWj" customClass="EmojiCollectionViewCell" customModule="EmojiArt" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsR-av-8yd">
+                                                    <rect key="frame" x="21.5" y="-2" width="37" height="84"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                    <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="addEmojiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dM9-Sb-y8O"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="fsR-av-8yd" firstAttribute="centerX" secondItem="OCR-kr-EWj" secondAttribute="centerX" id="Yhs-rN-QyA"/>
+                                            <constraint firstItem="fsR-av-8yd" firstAttribute="centerY" secondItem="OCR-kr-EWj" secondAttribute="centerY" id="dBD-cB-sk9"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiInputCell" id="O8T-2b-RfJ" customClass="TextFieldCollectionViewCell" customModule="EmojiArt" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osT-77-Bev">
+                                                    <rect key="frame" x="0.0" y="25" width="80" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textField:" destination="How-3c-HBQ" eventType="editingDidEnd" id="vN9-JT-Kuo"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="osT-77-Bev" firstAttribute="leading" secondItem="O8T-2b-RfJ" secondAttribute="leading" id="2M6-Ow-OTw"/>
+                                            <constraint firstItem="osT-77-Bev" firstAttribute="centerY" secondItem="O8T-2b-RfJ" secondAttribute="centerY" id="SZY-RH-akc"/>
+                                            <constraint firstItem="osT-77-Bev" firstAttribute="centerX" secondItem="O8T-2b-RfJ" secondAttribute="centerX" id="ZG0-b0-YSm"/>
+                                            <constraint firstAttribute="trailing" secondItem="osT-77-Bev" secondAttribute="trailing" id="hBj-oB-QKC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="osT-77-Bev" id="ZWB-hw-stB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -187,6 +237,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="How-3c-HBQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-495.11718749999994" y="354.6875"/>
         </scene>
